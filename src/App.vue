@@ -25,7 +25,7 @@
             component: routes[i].url ? httpVueLoader(routes[i].url) : null,
             redirect: routes[i].redirect ? routes[i].redirect : null,
             props: (route)=>({
-              query: route.query
+              ...route.query
             })
           })
         }
