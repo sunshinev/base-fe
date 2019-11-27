@@ -16,23 +16,5 @@ module.exports = {
     	config
 		.output
 		.filename('js/[name].bundle.js')
-
-
-		// config.module
-		// 	.rule('vue')
-		// 	.test(/\.vue$/)
-		// 	.use('vue-loader')
-		// 	.loader('vue-loader')
-		// 	.end()
-
-		// config.module
-		// 	.rule('vue')
-		// 	.test(/\.vue$/)
-		// 	.use('iview-loader')
-		// 	.loader('iview-loader')
-		// 		.options({
-		// 			prefix: false
-		// 		})
-		// 	.end()
 	}
 }

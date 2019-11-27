@@ -9,7 +9,6 @@
   export default {
     components: {
       LayoutRoot: 'url:'+window.location.origin+window.location.pathname + "/render?path=/layouts/default"
-      // LayoutRoot: 'url: http://localhost/account-book/manage/render?path=/layouts/default'
     },
     updated() {
       this.route(this.$refs.ch.routes)
