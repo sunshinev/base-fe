@@ -28,11 +28,19 @@ new Vue({
 }).$mount('#app')
 
 axios.interceptors.request.use(function(config) {
-     Vue.prototype.$Spin.show();
+     // Vue.prototype.$Spin.show();
+     Vue.prototype.$Message.loading('loading');
     return config
 })
 
-axios.interceptors.response.use(response=>{
-    Vue.prototype.$Spin.hide();
-    return response
-})
+axios.interceptors.response.use(
+	response=>{
+		Vue.prototype.$Spin.hide();
+		Vue.prototype.$Message.success('load success');
+	    return response
+	},
+	error=>{
+		Vue.prototype.$Spin.hide();
+		Vue.prototype.$Message.error(error.message);
+	}
+)
